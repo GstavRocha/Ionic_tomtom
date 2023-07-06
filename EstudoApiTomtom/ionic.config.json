@@ -1,0 +1,7 @@
+{
+  "name": "EstudoApiTomtom",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
