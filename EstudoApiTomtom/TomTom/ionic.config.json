@@ -1,0 +1,7 @@
+{
+  "name": "TomTom",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

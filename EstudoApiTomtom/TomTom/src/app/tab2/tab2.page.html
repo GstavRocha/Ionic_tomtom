@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TomTom App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list>
+  <ion-item>
+    <ion-text>Buscador Tom Tom</ion-text>
+  </ion-item>
+  <ion-item>
+    {{reverseGeoCoded}}
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="input" label="busca" label-placement="stacked" placeholder="digite aqui"></ion-input>
+  </ion-item>
+  <ion-label>
+    <ion-button (click)="buscador(input)">Buscar</ion-button>
+  </ion-label>
+</ion-list>
+  <ion-list *ngFor="let i of resultado">
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{i.poi.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Enderço: {{i.address.streetName}},
+          {{i.address.municipality}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
